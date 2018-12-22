@@ -1,0 +1,18 @@
+{
+  "extends": ["prettier", "standard"],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "plugins": ["prettier", "standard"],
+  "rules": {
+    "prettier/prettier": [
+      "error"
+    ],
+    "yoda": 0,
+    "no-unused-vars": 1
+  },
+  "globals": {
+    "$": false
+  }
+}
