@@ -13,3 +13,5 @@ clean-container:
 clean:
 	rm -rf bin
 
+check:
+	curl http://localhost:8080/
