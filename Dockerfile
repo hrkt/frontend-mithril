@@ -11,6 +11,4 @@ FROM nginx:1.15.7-alpine as production-stage
 COPY ./index.html /usr/share/nginx/html
 COPY --from=build-stage ./bin/* /usr/share/nginx/html/bin/
 EXPOSE 80
-#CMD /usr/sbin/nginx -g daemon off;
-#CMD /bin/sh
 CMD /usr/sbin/nginx -g "daemon off;"
