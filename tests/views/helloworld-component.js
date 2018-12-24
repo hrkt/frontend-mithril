@@ -1,15 +1,18 @@
 const o = require("mithril/ospec/ospec");
-const callAsync = require("mithril/test-utils/callAsync");
-const mock = require("mithril/test-utils/browserMock")();
 
-global.window = mock;
-global.document = mock.document;
+// mock
+const greetingMessage = {
+  getText: () => {
+    return "hello, world";
+  }
+};
 
-var HelloWorldComponent = require("../src/helloworld-component");
+var HelloWorldComponent = require("../../src/views/helloworld-component");
+helloWorldComponent = new HelloWorldComponent(greetingMessage);
 
 o.spec("HelloWorldComponent", function() {
   o("returns a div", function() {
-    var vnode = HelloWorldComponent.view();
+    var vnode = helloWorldComponent.view();
 
     o(vnode.tag).equals("div");
     o(vnode.children.length).equals(1);

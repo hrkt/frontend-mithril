@@ -1,5 +1,14 @@
-var m = require("mithril");
+"use strict";
 
-var HelloWorldComponent = require("./helloworld-component");
+const m = require("mithril");
 
-m.mount(document.body, HelloWorldComponent);
+const GreetingMessage = require("./models/greeting-message");
+const greetingMessage = new GreetingMessage();
+greetingMessage.loadMessage();
+
+setTimeout(function() {
+    const HelloWorldComponent = require("./views/helloworld-component");
+    const helloWorldComponent = new HelloWorldComponent(greetingMessage);
+    
+    m.mount(document.body, helloWorldComponent);    
+}, 1000);

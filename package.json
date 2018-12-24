@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack src/index.js --output bin/app.js -p",
     "start": "webpack src/index.js --output bin/app.js -d --watch",
+    "start:dev": "webpack-dev-server --mode=development --host=localhost --watch-content-base --open-page index.html",
     "test": "ospec"
   },
   "keywords": [],
@@ -20,6 +21,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "prettier": "^1.15.3",
     "webpack": "^4.28.0",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.13"
   }
 }
