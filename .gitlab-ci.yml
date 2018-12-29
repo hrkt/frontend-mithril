@@ -1,4 +1,4 @@
-image: alpine:3.8.2
+image: alpine:3.8
 
 stages:
     - hello
