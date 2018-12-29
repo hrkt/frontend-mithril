@@ -1,0 +1,11 @@
+image: alpine:3.8.2
+
+stages:
+    - hello
+
+print_hello:
+    stage: hello
+    tags:
+        - test
+    script:
+        - echo hello, world!
