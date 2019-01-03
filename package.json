@@ -4,8 +4,8 @@
   "description": "Enterprise hello,world client",
   "main": "index.js",
   "scripts": {
-    "build": "webpack src/index.js --output bin/app.js -p",
-    "start": "webpack src/index.js --output bin/app.js -d --watch",
+    "build": "webpack src/index.js --output bin/bundle.js -p",
+    "start": "webpack src/index.js --output bin/bundle.js -d --watch",
     "start:dev": "webpack-dev-server --mode=development --host=localhost --watch-content-base --open-page index.html",
     "test": "ospec"
   },

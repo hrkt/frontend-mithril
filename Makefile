@@ -4,7 +4,7 @@ build:
 	sudo docker build -t $(LABEL) .
 
 run:
-	sudo docker run -p 8080:80 $(LABEL)
+	sudo docker run --rm -p 38080:80 $(LABEL)
 
 clean-container:
 	sudo docker image prune
