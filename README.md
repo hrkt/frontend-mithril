@@ -38,5 +38,6 @@ $ make run
 ## LICENSE
 MIT
 
-## LICENSE
-MIT
+## CI
+
+[![CircleCI](https://circleci.com/gh/hrkt/frontend-mithril.svg?style=svg)](https://circleci.com/gh/hrkt/frontend-mithril)
